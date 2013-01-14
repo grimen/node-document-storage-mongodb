@@ -10,6 +10,9 @@ module.exports = {
       db.collection(type, function(err, collection) {
         collection.findOne({_id: id}, function(err, doc) {
           db.close();
+          if (doc) {
+            delete doc._id;
+          }
           callback(err, doc);
         });
       });
