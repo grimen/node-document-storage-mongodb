@@ -8,6 +8,8 @@ var Storage = require('node-document-storage');
 module.exports = Storage.Spec('MongoDB', {
   module: require('..'),
   engine: require('mongodb'),
+  id: 'mongodb',
+  protocol: 'mongodb',
   db: 'default-test',
   default_url: 'mongodb://localhost:27017/default-test',
   authorized_url: 'mongodb://heroku:f51b96d19b73a934b3d2a0d43e4b7aa7@alex.mongohq.com:10020/app9156953',
